@@ -1,0 +1,10 @@
+# 本项目为springboot项目;
+# 本项目旨在将代码生成参数可配置，在 GeneratorDto 中罗列属性均可配置
+# 用作日常开发偷懒，启动项目后 浏览器访问   generator/born 接口，参数为数据库表名，多个表以英文逗号隔开;
+
+# resources/lib 下存放了mysql 8.0.13 的驱动包;
+# resources/tamp 为临时空间，碍眼的话可以用File类生成临时文件替代
+
+# 如需更换数据库，请务必在 resources/lib 下添加对应的驱动，并且更新 GeneratorConfig文件中 classpathEntry的获取
+
+# generator包下已配置 传统插件和lombok插件，请在generatorConfig中更新

@@ -19,8 +19,8 @@ public class GeneratorController {
 
     @GetMapping("/born")
     public void born(HttpServletRequest request, HttpServletResponse response,
-                     @RequestParam("tableName") String tableName) {
-        service.born(request,response,tableName);
+                     @RequestParam("tableNames") String tableNames) {
+        service.born(request,response,tableNames);
     }
 
 }
