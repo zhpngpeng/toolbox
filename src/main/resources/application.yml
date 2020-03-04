@@ -1,0 +1,13 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: toolbox
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:192.168.1.107}:${MYSQL_PORT:3306}/${DB_NAME:mediarray}?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:poiu0987@#}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  thymeleaf:
+    cache: false #关闭缓存
+    prefix: classpath:/views/ #调整页面路径
