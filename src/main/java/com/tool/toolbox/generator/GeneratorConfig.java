@@ -31,7 +31,6 @@ public class GeneratorConfig {
             classpathEntry  = sysUrl + File.separator + "lib" + File.separator + "mysql-connector-java-8.0.13.jar";
         }else
             throw new IllegalStateException("Unexpected value: " + generatorDto.getDriverClass());
-        List<String> warnings = new ArrayList<>();
         Context context = new Context(ModelType.CONDITIONAL);
         context.setTargetRuntime("MyBatis3");
         context.setId("mysql");
@@ -111,7 +110,7 @@ public class GeneratorConfig {
         DefaultShellCallback callback = new DefaultShellCallback(true);
         MyBatisGenerator myBatisGenerator;
         try {
-            myBatisGenerator = new MyBatisGenerator(config, callback, warnings);
+            myBatisGenerator = new MyBatisGenerator(config, callback, new ArrayList<>(0));
             myBatisGenerator.generate(null);
             return sysUrl + File.separator + "tamp";
         } catch (InvalidConfigurationException | InterruptedException | IOException | SQLException e) {
